@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Générateur ASCII</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Générateur ASCII</h2>
+        <p class="sub-title">Fonctionnement Local</p>
+        <div class="controls">
+            <div class="mode-selector">
+                <h3>Choisir le mode :</h3>
+                <div class="mode-option">
+                    <input type="radio" id="modeSP" name="mode" value="SP" checked>
+                    <label for="modeSP">
+                        Small Picture (SP) <span class="mode-description">Compact et rapide, parfait pour les messageries.</span>
+                    </label>
+                </div>
+                <div class="mode-option">
+                    <input type="radio" id="modeBP" name="mode" value="BP">
+                    <label for="modeBP">
+                        Big Picture (BP) <span class="mode-description">Détail maximal, idéal pour une qualité supérieure.</span>
+                    </label>
+                </div>
+            </div>
+            <div class="file-upload">
+                <input type="file" id="fileInput" accept="image/*">
+                <label for="fileInput">Choisir une image</label>
+            </div>
+            <div class="action-buttons">
+                <button onclick="convertToASCII()">Convertir</button>
+                <button onclick="copyText()">Copier le texte</button>
+            </div>
+        </div>
+        <!-- Cadre d'aperçu permanent -->
+        <div id="asciiOutput" class="ascii-output"></div>
+    </div>
+    <footer class="copyright">
+        <p>© 2024 Louisi Industries - L'utilisation de cet outil est sous la seule responsabilité de l'utilisateur</p>
+    <a href="terms.html" class="terms-button">Conditions</a>
+    </footer>
+    <script src="ascii_generator.js"></script>
+</body>
+</html>
